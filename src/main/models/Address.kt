@@ -16,7 +16,7 @@ class Address(_street: String, _city: String) : IAddress{
     init {
 
         if (_street.isEmpty() || _city.isEmpty())
-            throw Exception("Incorrect data")
+            throw Exception(ErrorMessages.INCORRECT_DATA_MESSAGE)
 
         street = _street
         city = _city

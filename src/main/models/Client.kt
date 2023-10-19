@@ -16,7 +16,7 @@ class Client(_name: String, _phoneNumber: String, _address: Address) : IClient{
 
     init {
         if (_name.isEmpty() || _phoneNumber.isEmpty())
-            throw Exception("Incorrect data")
+            throw Exception(ErrorMessages.INCORRECT_DATA_MESSAGE)
 
         name = _name
         phoneNumber = _phoneNumber

@@ -26,7 +26,7 @@ class Order(_id: Long, _totalPrice: BigDecimal, _orderStatus: OrderStatus) : IOr
     init {
 
         if (_id < 0 || _totalPrice < BigDecimal.ZERO)
-            throw Exception("Incorrect data")
+            throw Exception(ErrorMessages.INCORRECT_DATA_MESSAGE)
 
         id = _id
         totalPrice = _totalPrice

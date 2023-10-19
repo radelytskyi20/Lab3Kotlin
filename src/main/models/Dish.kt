@@ -13,7 +13,7 @@ class Dish(_name: String, _description: String) : IDish {
         private set
     init {
         if (_name.isEmpty() || _description.isBlank())
-            throw Exception("Incorrect data")
+            throw Exception(ErrorMessages.INCORRECT_DATA_MESSAGE)
 
         name = _name
         description = _description
