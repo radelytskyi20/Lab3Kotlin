@@ -3,15 +3,12 @@ import java.lang.Exception
 interface IClient{
     val name: String
     val phoneNumber: String
-    val address: Address
 }
 
-class Client(_name: String, _phoneNumber: String, _address: Address) : IClient{
+class Client(_name: String, _phoneNumber: String) : IClient{
     override var name: String
         private set
     override var phoneNumber: String
-        private set
-    override var address: Address
         private set
 
     init {
@@ -20,6 +17,5 @@ class Client(_name: String, _phoneNumber: String, _address: Address) : IClient{
 
         name = _name
         phoneNumber = _phoneNumber
-        address = _address
     }
 }
