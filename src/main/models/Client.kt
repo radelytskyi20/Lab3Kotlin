@@ -6,10 +6,8 @@ interface IClient{
 }
 
 class Client(_name: String, _phoneNumber: String) : IClient{
-    override var name: String
-        private set
-    override var phoneNumber: String
-        private set
+    override val name: String
+    override val phoneNumber: String
 
     init {
         if (_name.isEmpty() || _phoneNumber.isEmpty())

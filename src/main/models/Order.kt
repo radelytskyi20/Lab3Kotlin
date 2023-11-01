@@ -33,7 +33,7 @@ class Order : IOrder{
                 _orderStatus: OrderStatus, _dishes: List<IDish>,
                 _tableNumber: Int, _paymentMethod: PaymentMethod)
     {
-        if (_totalPrice < BigDecimal.ZERO || _tableNumber > 0)
+        if (_totalPrice <= BigDecimal.ZERO || _tableNumber <= 0)
             throw Exception(ErrorMessages.INCORRECT_DATA_MESSAGE)
 
         id = idCounter++
