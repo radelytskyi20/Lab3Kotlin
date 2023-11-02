@@ -36,7 +36,7 @@ class Order : IOrder{
         if (_totalPrice <= BigDecimal.ZERO || _tableNumber <= 0)
             throw Exception(ErrorMessages.INCORRECT_DATA_MESSAGE)
 
-        id = idCounter++
+        id = ++idCounter
         clients = _clients
         totalPrice = _totalPrice
         orderStatus = _orderStatus
