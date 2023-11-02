@@ -7,19 +7,12 @@ interface IIngredient{
 }
 
 class Ingredient(_name: String, _quantity : Double, _unit: String) : IIngredient{
-    override var name: String
-        private set
-    override var quantity: Double
-        private set
-    override var unit: String
-        private set
+    override val name: String = _name
+    override val quantity: Double = _quantity
+    override val unit: String = _unit
 
     init {
         if (_name.isEmpty() || _quantity <= 0 || _unit.isEmpty())
             throw Exception(ErrorMessages.INCORRECT_DATA_MESSAGE)
-
-        name = _name
-        quantity = _quantity
-        unit = _unit
     }
 }
