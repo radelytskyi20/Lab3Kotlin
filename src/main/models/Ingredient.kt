@@ -15,4 +15,8 @@ class Ingredient(_name: String, _quantity : Double, _unit: String) : IIngredient
         if (_name.isEmpty() || _quantity <= 0 || _unit.isEmpty())
             throw Exception(ErrorMessages.INCORRECT_DATA_MESSAGE)
     }
+    override fun toString(): String {
+        return "Ingredient(name='$name', quantity=$quantity, unit='$unit')"
+    }
+
 }
