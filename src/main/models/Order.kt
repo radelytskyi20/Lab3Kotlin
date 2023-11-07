@@ -65,12 +65,14 @@ class Order : IOrder{
         private set
 
     override fun toString(): String {
-        return "Order(id=$id, " +
-                "totalPrice=$totalPrice, " +
-                "orderStatus=$orderStatus, " +
-                "dishes=$dishes, " +
-                "clients=$clients, " +
-                "tableNumber=$tableNumber, " +
-                "paymentMethod=$paymentMethod)"
+        return """
+        Order(id=$id,
+        totalPrice=$totalPrice,
+        orderStatus=$orderStatus,
+        dishes=$dishes,
+        clients=$clients,
+        tableNumber=$tableNumber,
+        paymentMethod=$paymentMethod)
+        """.trimIndent()
     }
 }
