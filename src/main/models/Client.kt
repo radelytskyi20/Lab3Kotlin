@@ -16,4 +16,7 @@ class Client(_name: String, _phoneNumber: String) : IClient{
         name = _name
         phoneNumber = _phoneNumber
     }
+    override fun toString(): String {
+        return "Client(name='$name', phoneNumber='$phoneNumber')"
+    }
 }

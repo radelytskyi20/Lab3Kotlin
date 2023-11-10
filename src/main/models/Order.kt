@@ -63,4 +63,16 @@ class Order : IOrder{
         private set
     override var paymentMethod: PaymentMethod
         private set
+
+    override fun toString(): String {
+        return """
+        Order(id=$id,
+        totalPrice=$totalPrice,
+        orderStatus=$orderStatus,
+        dishes=$dishes,
+        clients=$clients,
+        tableNumber=$tableNumber,
+        paymentMethod=$paymentMethod)
+        """.trimIndent()
+    }
 }

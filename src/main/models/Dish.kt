@@ -28,5 +28,11 @@ class Dish : IDish {
 
     override var ingredients: List<IIngredient>
         private set
+
+    override fun toString(): String {
+        val ingredientList = ingredients.joinToString { it.toString() }
+        return "Dish(name='$name', description='$description', ingredients=[$ingredientList])"
+    }
+
 }
 
