@@ -1,17 +1,4 @@
 import java.util.LinkedList
-
-interface IOrderPaymentService {
-    fun addPayment(payment: IOrderPayment)
-    fun addPayments(payments: Collection<IOrderPayment>)
-    fun removePayment(payment: IOrderPayment)
-    fun removePayment(paymentId: Long)
-    fun getPaymentById(paymentId: Long): IOrderPayment?
-    fun removePayments(payments: Collection<IOrderPayment>)
-    fun getPaymentInfo(paymentId: Long)
-    fun getPaymentInfo(payment: IOrderPayment)
-    fun getAllPaymentsInfo()
-}
-
 class OrderPaymentService : IOrderPaymentService {
     private var payments: LinkedList<IOrderPayment> = LinkedList()
 
@@ -85,17 +72,3 @@ class OrderPaymentService : IOrderPaymentService {
         }
     }
 }
-
-interface IOrderPayment {
-    val id: Long
-    val amount: Double
-    val paymentMethod: PaymentMethod
-    val timestamp: String
-}
-
-class OrderPayment(
-    override val id: Long,
-    override val amount: Double,
-    override val paymentMethod: PaymentMethod,
-    override val timestamp: String
-) : IOrderPayment

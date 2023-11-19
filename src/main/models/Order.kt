@@ -1,27 +1,5 @@
 import java.lang.Exception
 import java.math.BigDecimal
-
-interface IOrder{
-    val id: Long
-    val totalPrice: BigDecimal
-    val orderStatus: OrderStatus
-    val dishes: List<IDish> //mb change to MutableList
-    val clients: List<IClient>
-    val tableNumber : Int
-    val paymentMethod: PaymentMethod //mb separate interface
-}
-
-enum class OrderStatus{
-    READY,
-    IN_PROCESS,
-    Done //when client got his order and pay it
-}
-
-enum class PaymentMethod{
-    Cash,
-    Card
-}
-
 class Order : IOrder{
     constructor(_client: IClient, _totalPrice: BigDecimal,
                 _orderStatus: OrderStatus, _dish: IDish,
