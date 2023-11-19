@@ -1,11 +1,4 @@
 import java.lang.Exception
-
-interface IDish {
-    val name: String
-    val description: String
-    val ingredients: List<IIngredient>
-}
-
 class Dish : IDish {
 
     constructor(_name: String, _description: String, _ingridient: IIngredient) :

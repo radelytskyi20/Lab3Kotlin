@@ -1,11 +1,4 @@
 import java.lang.Exception
-
-interface IIngredient{
-    val name: String
-    val quantity: Double
-    val unit: String
-}
-
 class Ingredient(_name: String, _quantity : Double, _unit: String) : IIngredient{
     override val name: String = _name
     override val quantity: Double = _quantity
